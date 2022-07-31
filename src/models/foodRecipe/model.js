@@ -5,16 +5,16 @@ const foodRecipe = (sequelize, DataTypes) => sequelize.define('FoodRecipe', {
     type: DataTypes.INTEGER,
     references: {
       model: 'Food',
-      key: 'id'
-    }
+      key: 'id',
+    },
   },
   RecipeId: {
     type: DataTypes.INTEGER,
     references: {
       model: 'Recipes',
-      key: 'id'
-    }
-  }
+      key: 'id',
+    },
+  },
 });
 
 module.exports = foodRecipe;
