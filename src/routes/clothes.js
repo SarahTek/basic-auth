@@ -15,13 +15,13 @@ router.delete('/clothes/:id', deleteClothes);
 
 // RESTful Route Handlers
 async function getClothes(req, res) {
-  let allClothes = await ClothesCollection.get();
+  let allClothes = await ClothesCollection.read();
   res.status(200).json(allClothes);
 }
 
 async function getOneClothes(req, res) {
   let id = req.params.id;
-  let theClothes = await ClothesCollection.get(id);
+  let theClothes = await ClothesCollection.read(id);
   res.status(200).json(theClothes);
 }
 
