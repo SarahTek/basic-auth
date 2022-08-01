@@ -1,11 +1,14 @@
 # basic-auth
 
-- ![basic auth UML](basic-auth.png)
+![basic auth UML](basic-auth.png)
 
 ## Pull Requests
 
 - [PR for basic-auth Phase 1](https://github.com/SarahTek/basic-auth/pull/2)
 
+### GitHub Action
+
+- [GitHub Actions](https://github.com/SarahTek/basic-auth/actions)
 ## Author
 
 - Sarah Teklemariam
