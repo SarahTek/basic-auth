@@ -4,7 +4,7 @@
 
 ## Pull Requests
 
-- [PR for basic-auth Phase 1](https://github.com/SarahTek/basic-auth/pull/2)
+- [PR for basic-auth Phase 1](https://github.com/SarahTek/basic-auth/pull/3)
 
 ### GitHub Action
 
