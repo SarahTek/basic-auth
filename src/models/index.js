@@ -21,7 +21,7 @@ const baseOptions =
   process.env.NODE_ENV === 'test'
     ? {
       logQueryParameters: true,
-      logging: (...args) => console.log(...args),
+      logging: (...args) => args,  //console.log(...args),
     }
     : {
       logging: () => {},

@@ -55,6 +55,6 @@ describe('web server authentication', () => {
       .send({ username: 'test user', password: 'test password' });
 
     console.log(response.body);
-    // expect(response.status).toBe(500);
+    expect(response.status).toBe(500);
   });
 });

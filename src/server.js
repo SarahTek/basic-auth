@@ -1,5 +1,6 @@
 'use strict';
 
+require('dotenv').config();
 // 3rd Party Dependencies (modules)
 const express = require('express');
 
