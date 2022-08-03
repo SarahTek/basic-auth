@@ -2,9 +2,11 @@
 
 require('dotenv').config();
 console.log(process.env.NODE_ENV);
-const DATABASE_URL = ['dev', 'test'].includes(process.env.NODE_ENV)
+// const DATABASE_URL = ['dev', 'test'].includes(process.env.NODE_ENV)
+const DATABASE_URL = process.env.NODE_ENV === 'test'
   ? 'sqlite::memory:'
   : process.env.DATABASE_URL;
+
 const { Sequelize, DataTypes } = require('sequelize');
 
 const Collection = require('./data-collection.js');
@@ -16,7 +18,7 @@ const userSchema = require('./users/model.js');
 
 
 const baseOptions =
-  process.env.NODE_ENV === 'dev'
+  process.env.NODE_ENV === 'test'
     ? {
       logQueryParameters: true,
       logging: (...args) => console.log(...args),
