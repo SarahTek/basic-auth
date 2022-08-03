@@ -21,6 +21,7 @@ describe('web server authentication', () => {
     expect(response.body.password.startsWith('$2b$10$')).toBe(true);
     expect(response.body.password.length).toBeGreaterThan(40);
     expect(response.body.password).not.toEqual('test password');
+    expect(response.body.role).toBe('user');
     // Run it once, get the error, and then
     // expect(response.body.password).toEqual(
     //   '$2b$10$IpbYE3WRzNPJn.t79nQ4E.9nYeOifrj0Od0vWZU2vxAsXsGEzz2xm'
