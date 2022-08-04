@@ -41,13 +41,15 @@ async function updateFood(req, res) {
 }
 
 async function deleteFood(req, res) {
-  if (req.user == 'admin') {
+  if (req.user?.role !== 'admin') {
+    res.status(403).send('unauthorized user');
+  }else{
     let id = req.params.id;
     let deletedFood = await FoodCollection.delete(id);
     res.status(200).json(deletedFood);
-  } else{
-    res.status(403).send('Unauthorized admin');
   }
+
 }
+
 
 module.exports = router;

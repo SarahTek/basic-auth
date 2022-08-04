@@ -58,7 +58,7 @@ describe('web server', () => {
     expect(response.body.id).toEqual(1);
   });
 
-  it('can update a record', async () => {
+  it('can update a  record', async () => {
     const data = { name: 'Broccoli' };
     const response = await mockRequest.put('/food/1').send(data);
     expect(response.status).toBe(200);
@@ -67,11 +67,12 @@ describe('web server', () => {
     expect(response.body.name).toEqual('Broccoli');
   });
 
-  it('can delete a record', async  () => {
-    const response = await mockRequest.delete('/food/1');
-    expect(response.status).toBe(200);
+  it('can delete a  record', async  () => {
+    const id = 1;
+    const response = await mockRequest.delete(`/food/${id}`);
 
-    const getResponse =  mockRequest.get('/food');
+    expect(response.status).toBe(200);
+    const getResponse = await mockRequest.get('/food');
     expect(getResponse.body.length).toEqual(0);
   });
 });
