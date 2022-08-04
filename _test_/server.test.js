@@ -67,11 +67,11 @@ describe('web server', () => {
     expect(response.body.name).toEqual('Broccoli');
   });
 
-  it('can delete a record', async () => {
+  it('can delete a record', async  () => {
     const response = await mockRequest.delete('/food/1');
     expect(response.status).toBe(200);
 
-    const getResponse = await mockRequest.get('/food');
+    const getResponse =  mockRequest.get('/food');
     expect(getResponse.body.length).toEqual(0);
   });
 });
