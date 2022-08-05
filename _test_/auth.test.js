@@ -49,7 +49,7 @@ describe('web server authentication', () => {
     const res1 = await mockRequest
       .post('/signup')
       .send({ username: 'test user', password: 'test password' });
-    expect(res1.status).toBe(201);
+    expect(res1.status).toBe(200);
 
     const response = await mockRequest
       .post('/signup')
