@@ -12,7 +12,7 @@ const userModel = (sequelize, DataTypes) => {
       type: DataTypes.VIRTUAL,
       get() {
         const payload = { username: this.username, role: this.role };
-        return jwt.sign(payload, SECRET);
+        return jwt.sign(payload, SECRET, { expiresIn: process.env.JWTEXPIRE }  );
       },
     },
   });
