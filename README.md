@@ -25,7 +25,7 @@
 
 ## Pull Requests
 
-- [PR for basic-auth Lab o7](https://github.com/SarahTek/basic-auth/pull/9)
+- [PR for basic-auth Lab o7](https://github.com/SarahTek/basic-auth/pull/13)
 
 ### GitHub Action
 
