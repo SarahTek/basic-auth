@@ -21,3 +21,4 @@ jobs:
               env:
                   CI: true
                   SECRET:gha
+                  JWTEXPIRE: '15m'
