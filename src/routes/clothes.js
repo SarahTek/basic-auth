@@ -2,7 +2,7 @@
 
 const express = require('express');
 
-const ClothesCollection = require('../models/index.js').Clothes;
+const ClothesCollection = require('../models/index.js');
 
 const router = express.Router();
 
